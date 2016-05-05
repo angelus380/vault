@@ -1,0 +1,98 @@
+//BODY
+body {
+  max-width:100%;
+  margin:0;
+  padding:0;
+  background-color: #0079BF;
+  font-family: Roboto, sans-serif;
+}
+
+//NAVBAR
+#nav_bar {
+  background-color: #0067A3;
+  padding:3px;
+  margin-bottom: 40px;
+}
+#nav_bar > div > a{
+  color: #fff;
+  background-color: #4C94BF;
+  margin:3px;
+  padding:5px 10px;
+  text-decoration: none;
+}
+#nav_bar > div > a:hover{
+  background-color: #66A4C8;
+}
+
+//USER
+#user{
+  color:#fff;
+  font-style: italic;
+}
+#user span{
+  font-weight: bold;
+  font-style: normal;
+  padding-left:10px;
+}
+
+//FORM (LOGIN SIGNUP)
+form, .error_messages{
+  width:280px;
+}
+.form-block{
+  background-color: #E2E4E6;
+  padding:15px;
+}
+.form-block > div > h1{
+  margin:0;
+  font-size:25px;
+}
+.form-content{
+  width:100%;
+  background-color: #eee;
+  padding:10px;
+  margin-top:10px;
+}
+.form-content > div{
+  padding-bottom:10px;
+  color:#929394;
+}
+.form-content > div > input{
+
+}
+// FORM BUTTON
+div.form-button{
+    width:100%;
+    padding-top:15px;
+    padding-bottom:0;
+}
+.form-button > input{
+  width:100%;
+  background-color: #4CAF50;
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.form-button > input:hover{
+  background-color: #4BBF6B;
+}
+
+//BORDER RADIUS
+.border-radius-3{
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.border-radius-4{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+//RESPONSIVE
+@media only screen and (max-device-width: 480px){
+
+}
