@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   get '/index' => 'welcome#index'
-  get '/contact' => 'welcome#contact'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
