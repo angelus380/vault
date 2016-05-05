@@ -1,10 +1,10 @@
 class WelcomeController < ApplicationController
-
+  #before_filter :authorize
+  
   def index
   end
 
-  before_filter :authorize
-  
   def contact
+    authorize
   end
 end
