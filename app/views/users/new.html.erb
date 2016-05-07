@@ -14,3 +14,9 @@
   <%= f.submit "Submit" %>
 
 <% end %>
+
+<% if @user.errors.any? %>
+  <% for message in @user.errors.full_messages %>
+    <%= message %>
+  <% end %>
+<% end %>
