@@ -10,3 +10,7 @@
   <%= submit_tag "Submit" %>
 
 <% end %>
+
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
