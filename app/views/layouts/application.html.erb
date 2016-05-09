@@ -2,24 +2,38 @@
 <html>
 <head>
   <title>Vault</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Roboto' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Roboto' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <% if current_user %>
+    <div id="nav_bar"class="flex justify-between">
+      <div id="user">
+        <span>Welcome </span> <%= current_user.name %>
+      </div>
 
-<% if current_user %>
-  Signed in as <%= current_user.name %>
-  <%= link_to "Home", '/' %>
-  <%= link_to "Contact", '/contact' %>
-  <%= link_to "Logout", '/logout' %>
-<% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Sign Up', '/signup' %>
-<% end %>
+      <div>
+        <%= link_to "Logout", '/logout', class: 'border-radius-3' %>
+      </div>
+    </div>
+  <% else %>
+    <div id="nav_bar"class="flex justify-end">
+      <div>
+        <%= link_to 'Login', '/login', class: 'border-radius-3' %>
+      </div>
 
-<%= yield %>
+      <div id="has_space">
+        <%= link_to 'Sign Up', '/signup', class: 'border-radius-3' %>
+      </div>
+    </div>
+  <% end %>
+
+<div id="content_wrapper">
+  <%= yield %>
+</div>
 
 </body>
 </html>
