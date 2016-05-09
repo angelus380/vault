@@ -1,22 +1,41 @@
-<h1>Signup!</h1>
+<div class="flex column align-center">
 
-<%= form_for :user, url: '/signup' do |f| %>
-  
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <%= form_for :user, url: '/signup' do |f| %>
+    <div class="flex column align-center">
+      <div class="flex justify-center form-h1 border-radius-4-top">
+        <h1>Sign Up</h1>
+      </div>
+      
+      <div class="flex column form-block border-radius-4-bot">
+        <div><%= f.label :username %></div>
+        <div><%= f.text_field :username %></div>
+        <div><%= f.label :name %> </div>
+        <div><%= f.text_field :name %></div>
+        <div><%= f.label :password %></div>
+        <div><%= f.password_field :password %></div>
+        <div><%= f.label :password_confirmation %></div>
+        <div><%= f.password_field :password_confirmation %></div>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+      <%= f.label :name %>  
+      <%= f.text_field :name %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
 
-  <%= f.submit "Submit" %>
-
-<% end %>
-
-<% if @user.errors.any? %>
-  <% for message in @user.errors.full_messages %>
-    <%= message %>
+      <%= f.submit "Submit" %>
+      </div>
+    </div>
   <% end %>
-<% end %>
+ 
+
+  <% if @user.errors.any? %>
+    <ul>
+      <% for message in @user.errors.full_messages %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+</div>
