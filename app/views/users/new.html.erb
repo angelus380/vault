@@ -15,27 +15,20 @@
         <div><%= f.password_field :password %></div>
         <div><%= f.label :password_confirmation %></div>
         <div><%= f.password_field :password_confirmation %></div>
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-      <%= f.label :name %>  
-      <%= f.text_field :name %>
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Submit" %>
+        <div class="form-button"><%= f.submit "Submit" %></div>
       </div>
     </div>
   <% end %>
  
-
   <% if @user.errors.any? %>
-    <ul>
-      <% for message in @user.errors.full_messages %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
+    <div class="form-error-messages border-radius-4">
+      <ul class="flex column justify-between">
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+        
+    </div>
   <% end %>
-
 </div>

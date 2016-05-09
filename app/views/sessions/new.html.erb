@@ -1,20 +1,28 @@
 <div class="flex column align-center">
 
-<h1>Login</h1>
+  <%= form_tag '/login' do %>
+    <div class="flex column align-center">
+        <div class="flex justify-center form-h1 border-radius-4-top">
+          <h1>Login</h1>
+        </div>
 
-<%= form_tag '/login' do %>
+        <div class="flex column form-block border-radius-4-bot">
+          <div><%= label_tag :username %></div>
+          <div><%= text_field_tag :username %></div>
+          <div><%= label_tag :password %></div>
+          <div><%= password_field_tag :password %></div>
 
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+          <div class="form-button"><%= submit_tag "Submit" %></div>
+        </div>
+      </div>
+  <% end %>
 
-  <%= submit_tag "Submit" %>
-
-<% end %>
-
-<% if flash[:error] %>
-  <%= flash[:error] %>
-<% end %>
+  <% if flash[:error] %>
+    <div class="form-error-messages border-radius-4">
+      <ul>
+        <li><%= flash[:error] %></li>
+      </ul>
+    </div>
+  <% end %>
 
 </div>
