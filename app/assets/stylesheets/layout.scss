@@ -1,16 +1,24 @@
 //BODY
-body {
+body{
   max-width:100%;
   margin:0;
   padding:0;
   background-color: #0079BF;
+  color:#fff;
   font-family: Roboto, sans-serif;
 }
+a{text-decoration: none;}
 #content_wrapper{
   padding:0px 10px;
 }
+
+.text-block{
+  width:400px;
+}
+a#code_link{color:gold;}
+
 //NAVBAR
-#nav_bar {
+#nav_bar{
   background-color: #0067A3;
   padding:10px;
   margin-bottom: 40px;
@@ -27,6 +35,9 @@ body {
 }
 #has_space{
   margin-left:10px;
+}
+.header > h1{
+  margin-top:0;
 }
 //USER
 #user{
@@ -54,6 +65,7 @@ body {
 .form-block{
   width:100%;
   background-color: #E2E4E6;
+  color:#000;
   padding:15px;
   border: 2px solid #fff;
   border-top:0;
@@ -66,9 +78,9 @@ body {
 }
 // FORM BUTTON
 div.form-button{
-    width:100%;
-    padding-top:15px;
-    padding-bottom:0;
+  width:100%;
+  padding-top:15px;
+  padding-bottom:0;
 }
 .form-button > input{
   width:100%;
@@ -136,5 +148,7 @@ div.form-button{
 }
 //RESPONSIVE
 @media only screen and (max-device-width: 480px){
-
+  .text-block{
+    width:250px;
+  }
 }
