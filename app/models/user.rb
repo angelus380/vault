@@ -3,5 +3,5 @@ class User < ActiveRecord::Base
 
   validates :username, uniqueness: true, presence: true
   validates :name, presence: true
-  validates :password, length: {minimum: }
+  validates :password, length: {minimum: 5}
 end
